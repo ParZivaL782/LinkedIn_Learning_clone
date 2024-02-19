@@ -1,0 +1,61 @@
+.marginTop {
+  margin-top: 60px;
+}
+
+.widthCont {
+  width: 32%;
+}
+
+.imgWidth {
+  width: 7%;
+  height: fit-content;
+}
+
+.letterSpa {
+  letter-spacing: 2px;
+}
+
+/* Input and button */
+.iandbH {
+  height: 50px;
+}
+
+.textB {
+  color: black;
+}
+
+.textB :hover {
+  color: black;
+}
+
+/* FOR FLOATING TEXT INSIDE INPUT TAG */
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: 5px;
+  bottom: 20px;
+  left: 12px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 45px;
+  padding-left: 10px;
+  padding-top: 17px;
+}
+
+.floating-label {
+  position: absolute;
+  padding-top: 10px;
+  margin-left: 0px;
+  pointer-events: none;
+  left: 12px;
+  top: 11px;
+  transition: 0.2s ease all;
+}
+.Div {
+  position: relative; /*  make label relate to div  */
+  padding-top: 10px; /*  make space for label      */
+}

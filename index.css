@@ -1,0 +1,641 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell,
+    Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+/* ########## style for nab-bar ##########*/
+
+#nav-bar {
+  background-color: rgb(154, 154, 228);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+}
+#nav-bar a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* ##########  style for nav-top  ##########  */
+#nav-top {
+  display: flex;
+  align-items: center;
+  padding: 3px 8%;
+  color: grey;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  border-bottom: 0.8px solid rgba(161, 158, 158, 0.411);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+#nav-top :hover {
+  color: rgb(0, 0, 0);
+}
+#nav-top div {
+  margin: 0px 5px;
+}
+
+#in-icon {
+  display: flex;
+  align-items: center;
+  /* background-color: rgba(88, 12, 133, 0.308); */
+}
+#in-icon span {
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 4px;
+  margin-left: 6px;
+  /* background-color: rgba(88, 12, 133, 0.308); */
+}
+#in-icon div:nth-child(1) {
+  /* background-color: rgb(225, 0, 255); */
+  padding-top: 5px;
+}
+
+#browse-icon {
+  /* background-color: rgba(88, 12, 133, 0.308); */
+  text-align: center;
+}
+#browse-icon div:nth-child(2) {
+  font-size: 12px;
+}
+#search-icon {
+  display: none;
+  /* background-color: rgba(243, 4, 24, 0.308); */
+  text-align: center;
+}
+#search-icon div:nth-child(2) {
+  font-size: 12px;
+}
+#searchL-icon {
+  flex: 2;
+  /* background-color: rgba(52, 243, 4, 0.308); */
+  display: flex;
+}
+#searchL-icon input {
+  padding: 8px 8px 8px 40px;
+  background-color: rgba(182, 182, 182, 0.288);
+  border: 0px;
+  width: 80%;
+  border-radius: 5px;
+}
+#searchL-icon input:focus {
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+  outline: none;
+  border: 0.8px solid rgb(0, 119, 181);
+}
+
+#searchL-icon div:nth-child(1) {
+  /* background-color: rgb(225, 0, 255); */
+  margin-right: -30px;
+  padding-top: 5px;
+}
+#home-icon {
+  /* background-color: rgba(88, 12, 133, 0.308); */
+  text-align: center;
+}
+
+#home-icon div:nth-child(2) {
+  font-size: 12px;
+}
+#learning-icon {
+  /* background-color: rgba(88, 12, 133, 0.308); */
+  text-align: center;
+}
+#learning-icon div:nth-child(2) {
+  font-size: 12px;
+}
+#profile-icon {
+  /* background-color: rgb(225, 0, 255); */
+  position: relative;
+  text-align: center;
+}
+#learning-icon div:nth-child(2) {
+  font-size: 12px;
+}
+#profile-icon:hover {
+  cursor: pointer;
+}
+#profile-icon div:nth-child(2) div:nth-child(2) {
+  margin-left: -4px;
+}
+#profile-icon div:nth-child(2) {
+  display: flex;
+  font-size: 12px;
+}
+#profile-icon > div > img:nth-child(1) {
+  width: 25px;
+  border-radius: 15px;
+}
+#profile-icon:focus #profile-dd {
+  display: block;
+}
+#profile-dd {
+  overflow-y: auto;
+  display: none;
+  top: 53px;
+  top: 53px;
+  right: -3px;
+  position: absolute;
+  width: 260px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(202, 202, 202, 0.705);
+  border-radius: 3px;
+}
+
+#profile-dd a {
+  text-decoration: none;
+  color: grey;
+}
+#profile-dd a:nth-child(7) div {
+  border-bottom: 1px solid rgba(177, 177, 177, 0.664);
+}
+#profile-dd div {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+#profile-dd div:hover {
+  background-color: rgba(161, 219, 255, 0.226);
+}
+#user-con {
+  display: flex;
+
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+}
+#user-image {
+  width: 60px;
+  border-radius: 60px;
+}
+#lang-icon {
+  /* background-color: rgb(255, 0, 0); */
+  position: relative;
+
+  text-align: center;
+}
+#lang-icon:hover {
+  cursor: pointer;
+}
+#lang-icon > div:nth-child(2) {
+  display: flex;
+  font-size: 12px;
+}
+#lang-icon div:nth-child(2) div:nth-child(2) {
+  margin-left: -4px;
+}
+#free-month {
+  padding: 6px 10px;
+
+  font-weight: 600;
+}
+#free-month:hover {
+  background-color: rgba(173, 173, 173, 0.192);
+}
+#lang-icon:focus #lang-dd {
+  display: block;
+}
+#lang-dd {
+  display: none;
+  top: 53px;
+  right: -3px;
+  position: absolute;
+  width: 260px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(202, 202, 202, 0.705);
+  border-radius: 3px;
+}
+
+#lang-dd a {
+  text-decoration: none;
+  color: grey;
+}
+#lang-dd div {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+#lang-dd div:hover {
+  background-color: rgba(161, 219, 255, 0.226);
+}
+#sign_in{
+  border-radius: 20px;
+  padding: 6px 15px 8px;
+ font-weight: 600;
+  border: 1px solid rgb(10,102,194);
+}
+#sign_in:hover{
+  background-color: rgba(203, 219, 235, 0.356);
+  
+}
+
+/*  ##########  style for nav-btm  ########## */
+.Solutions {
+  color: gray;
+}
+#nav-btm {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+
+  padding: 11px 8%;
+  background-color: rgb(243, 246, 248);
+  justify-content: flex-end;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+#nav-btm a {
+  font-weight: 500;
+  margin: 0px 1%;
+}
+#nav-btm a:hover {
+  text-decoration: underline;
+  color: black;
+}
+#nav-btm a:nth-last-child(1) {
+  margin: 0px 15px 0px 0px;
+  padding-left: 1%;
+  border-left: 1px solid gray;
+}
+
+/*  ##########  style for content-container  ##########  */
+#content-container {
+  background-color: rgb(255, 255, 255);
+}
+/* ##########  style for welcome-banner  ########## */
+#welcome-banner {
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  padding: 0px 0% 0px 8%;
+}
+#welcome-content {
+  display: flex;
+  align-items: center;
+  flex: 10;
+  /* background-color: aqua; */
+  margin-right: -40px;
+}
+#welcome-content h2 {
+  font-size: 28px;
+}
+#welcome-content a {
+  text-decoration: none;
+}
+#linkedin-user-image {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 10px;
+}
+#linkedin-user-image img {
+  width: 20px;
+  border-radius: 20px;
+}
+#linkedin-user-image span:nth-child(2) {
+  margin-left: -14px;
+}
+#linkedin-user-image span:nth-child(3) {
+  margin-left: 8px;
+  margin-bottom: 3.5px;
+}
+#Start-free-month {
+  margin: 10px 0px 20px;
+}
+#Start-free-month a {
+  text-decoration: none;
+  color: white;
+}
+#Start-free-month a div {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgb(0, 115, 177);
+  padding: 12px;
+  width: 200px;
+  border-radius: 2px;
+  text-align: center;
+}
+#welcome-content strong {
+  font-size: 15px;
+  color: rgb(102, 94, 209);
+}
+#welcome-content strong:hover {
+  text-decoration: underline;
+}
+
+.linkedin-image {
+  flex: 1;
+  margin-top: -150px;
+  width: 600px;
+}
+
+.linkedin-image img {
+  height: 550px;
+  margin-right: -210px;
+}
+/*  ##########  style for top-pick  ########## */
+#top-pick {
+  background-color: rgb(243, 242, 239);
+}
+/*  ##########  style for all slide ########## */
+.slide-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.slide-s div p:nth-child(2) {
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  margin: 3px 0px;
+}
+.slide-s div p:nth-child(3) {
+  color: rgb(0, 0, 0);
+
+  margin: 5px 0px 8px;
+}
+.slide-s div p:nth-child(4) {
+  color: gray;
+  font-size: 12px;
+}
+.slide-m {
+  margin: 0px 8%;
+  /* background-color: azure; */
+  overflow: hidden;
+}
+.slide-s {
+  display: flex;
+}
+.slide-s div {
+  margin: 8px;
+ 
+}
+.slide-s div:hover {
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ padding-bottom: 10px;
+ border: 1px solid rgba(156, 156, 156, 0.452);
+ box-sizing: 5px;
+}
+.slide-s div:hover p:nth-child(2) {
+ margin: 0px 10px;
+}
+.slide-s div:hover p:nth-child(3) {
+ margin: 0px 10px;
+}
+.slide-s div:hover p:nth-child(4) {
+ margin: 0px 10px;
+}
+#des {
+  display: none;
+  margin-top: 5px;
+  height: 60px;
+  color: gray;
+  line-height: 1.3;
+  font-size: 12px;
+  overflow: hidden;
+  text-align: justify;
+ 
+}
+.slide-s div:hover #des {
+ display: block;
+  margin: 5px 10px;
+ z-index: 10;
+}
+
+.slide-s div img {
+  width: 250px;
+  border: 1px solid rgba(158, 158, 158, 0.452);
+  border-radius: 4px;
+  height: 150px;
+}
+.slide-btn {
+  margin: 0px 8% 0px;
+  padding: 20px 0px 15px;
+}
+.slide-btn div:nth-child(2) {
+  width: 30%;
+  text-align: right;
+}
+
+.slide-btn button {
+  padding: 7px 7px 5px;
+  border-radius: 50px;
+  color: gray;
+
+  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0);
+}
+.prevbtn {
+  margin-right: 6px;
+}
+
+/*  ##########  style for advance career  ########## */
+#advance-career {
+  margin: 30px 8%;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.479);
+}
+#advance-career-top-portion {
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(215, 235, 206);
+}
+#advance-career-top-portion h3 {
+  margin: 10px 0px 20px;
+}
+#search-course-name {
+  display: flex;
+  align-items: center;
+}
+#search-course-name p {
+  font-size: 18px;
+}
+#search-course-name input {
+  width: 260px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.849);
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+#advance-career-btm-portion {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  grid-gap: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+#advance-career-btm-portion a > .courses {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border: 1px solid rgba(128, 128, 128, 0.212);
+  border-radius: 10px;
+}
+#advance-career-btm-portion a > .courses:hover {
+  background-color: rgba(62, 158, 206, 0.164);
+}
+#advance-career-btm-portion a > .courses div:nth-child(2) {
+  color: black;
+}
+#advance-career-btm-portion a {
+  text-decoration: none;
+}
+#advance-career-btm-portion div .serial-no {
+  font-size: 22px;
+  font-weight: 500;
+  margin-right: 10px;
+  color: black;
+}
+#advance-career-btm-portion div .Explore {
+  color: rgb(62, 159, 206);
+  font-weight: 500;
+  flex: 2;
+  padding-right: 8px;
+  text-align: right;
+}
+/*  ########## style for footer-container  ##########  */
+#footer-container {
+  border-top: 1px solid rgba(151, 151, 151, 0.568);
+}
+#footer-top {
+  color: rgb(255, 255, 255);
+  display: flex;
+  margin: 30px 8% 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#footer-top a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+}
+.dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.301);
+  margin: 0px 1%;
+}
+#footer-btm {
+  display: flex;
+  margin: 0px 0px 25px;
+  justify-content: center;
+  align-items: center;
+}
+#footer-btm p {
+  font-size: 12.5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+}
+
+/*  ---------------- Media query for all  ----------------  */
+
+/* ##########  Media query style for header-container ##########*/
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  #nav-top {
+    padding: 3px 2%;
+  }
+  #nav-btm {
+    padding: 11px 0%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 975px) {
+  #home-icon {
+    display: none;
+  }
+  #lang-icon {
+    display: none;
+  }
+  #free-month {
+    display: none;
+  }
+  #searchL-icon {
+    display: none;
+  }
+  #search-icon {
+    display: block;
+  }
+  #space {
+    flex: 2;
+  }
+
+  #nav-btm {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 765px) {
+  #in-icon span {
+    display: none;
+  }
+  #browse-icon div:nth-child(2) {
+    display: none;
+  }
+
+  #search-icon div:nth-child(2) {
+    display: none;
+  }
+  #learning-icon div:nth-child(2) {
+    display: none;
+  }
+  #profile-icon div:nth-child(2) {
+    display: none;
+  }
+}
+/* ##########  Media query style for content-container ##########*/
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  #welcome-banner {
+    padding: 0px 0% 0px 2%;
+  }
+  .slide-m {
+    margin: 0px 2%;
+  }
+  .slide-btn {
+    margin: 0px 2% 0px;
+  }
+  #advance-career {
+    margin: 30px 2%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 975px) {
+  #advance-career-btm-portion {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 765px) {
+  #welcome-content {
+    margin-right: 0px;
+  }
+  .linkedin-image {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 640px) {
+  #search-course-name {
+    display: block;
+  }
+  #search-course-name input {
+    margin: 10px 0px 0px;
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 485px) {
+  .slide-btn div:nth-child(2) {
+    width: 80%;
+  }
+}
+/* ##########  Media query style for footer-container ##########*/
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  #footer-top {
+    margin: 30px 2% 20px;
+  }
+}

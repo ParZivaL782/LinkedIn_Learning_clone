@@ -1,0 +1,40 @@
+.bColor {
+  background-color: #f3f2ef;
+}
+
+.marginTop {
+  margin-top: 23px;
+}
+
+.widthCont {
+  width: 42%;
+}
+
+.imgWidth1 {
+  background-color: #f3f2ef;
+  width: 8%;
+  height: fit-content;
+}
+
+.fontSize {
+  font-size: 32px;
+}
+
+.textColor {
+  color: #666666;
+  font-size: 14px;
+}
+
+.borderRadius {
+  border-radius: 25px;
+  height: 50px;
+  align-items: center;
+}
+
+.heightInp {
+  height: 33px;
+}
+
+.borderRad {
+  border-radius: 5px;
+}

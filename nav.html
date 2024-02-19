@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .BOX {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(12, 1fr));
+      grid-template-rows: 100px 350px 500px 300px 150px 400px 400px 300px 400px 400px 400px 400px 400px 150px;
+      grid-gap: 20px;
+      grid-template-areas: "a a a a a a a a a a a a ";
+    }
+    .img1 {
+      color: black;
+      grid-area: a;
+    }
+    #navbar {
+      height: 60px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    img {
+      height: 35px;
+      margin-top: 1.2%;
+      margin-left: 2%;
+    }
+    hr {
+      background-color: #3c94c3;
+      height: 2.5px;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .innav {
+      text-align: center;
+      margin-top: -2.5%;
+      margin-left: 45%;
+    }
+    .innav ul {
+      display: inline-flex;
+      list-style: none;
+      color: #3c94c3;
+    }
+    .innav ul li {
+      width: 130px;
+      color: #3c94c3;
+    }
+    .cs {
+      border: 1px solid #3c94c3;
+      margin-left: 6px;
+    }
+    .vr {
+      color: grey;
+    }
+    a {
+      color: #3c94c3;
+      border-bottom: none;
+    }
+    .innav ul li a {
+      text-decoration: none;
+    }
+    .pro,
+    .innav ul :hover {
+      text-decoration: underline;
+      border-bottom: #3c94c3;
+    }
+    .sub1 {
+      display: none;
+    }
+    .innav ul li:hover .sub1 {
+      display: block;
+      position: absolute;
+      margin-top: 15px;
+      margin-left: -19px;
+      color: white;
+      text-decoration: none;
+    }
+    .innav ul li:hover .sub1 ul {
+      display: block;
+      margin: 10px;
+      color: white;
+    }
+    .innav ul li:hover .sub1 ul li {
+      width: 140px;
+      padding: 5px;
+
+      background: rgb(207, 210, 212);
+      text-align: center;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="BOX">
+      <div class="img1"><hr>
+        <div id="navbar">
+         
+            <img src="https://static-exp1.licdn.com/sc/h/7irqko3wy9zp1sh07aba5ekh6" alt="">
+            <div class="innav">
+           <ul>
+               <li class="pro"><a href="#"><i class="fa fa user"></i> Product</a>
+                <div class="sub1">
+                    <ul>
+                        <li class="whity"><a href="https://www.google.com/">Overview</a></li>
+                        <li><a href="#">For Business</a></li>
+                        <li ><a href="#">Higher Education</a></li>
+                        <li><a href="#">Government Agecy</a></li>
+                    </ul>
+    
+                </div>
+            
+                </li>
+               <li><a href="#"><i class="fa fa clone"></i>Course</a>
+                <div class="sub1">
+                    <ul>
+                        <li class="whity"><a href="#">Business</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li ><a href="#">Creation</a></li>
+                        <li><a href="#">Certfication</a></li>
+                    </ul>
+            </li>
+               <li><a href="#"><i class="fa fa userss"></i>Resources</a>
+                <div class="sub1">
+                    <ul>
+                        <li class="whity"><a href="#">Blog</a></li>
+                        <li><a href="#">Stories</a></li>
+                        <li ><a href="#">Partners</a></li>
+                        <li><a href="#">Join Club</a></li>
+                        <li><a href="#">Our Courses</a></li>
+    
+    
+                    </ul>
+                </li>
+               <li><a href="#"><i class="fa fa inr"></i>Support</a>
+                <div class="sub1">
+                    <ul>
+                        <li ><a href="#">Support</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li ><a href="#">Customer Care</a></li>
+                        <!-- <li><a href="#">Go</a></li> -->
+                    </ul>
+                </li><div class ="vr">|</div>
+               <li class="cs"><a href="#"><i class="fa fa phone"></i>Contact Sales</a></li>
+               
+           </ul>
+        </div>
+    
+        </div>
+        <hr></div>
+    </div>
+  </body>
+</html>

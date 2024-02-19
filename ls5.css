@@ -1,0 +1,47 @@
+/* linkedIn name and picture */
+.iconColor {
+  color: #0077b5;
+  padding-top: 13px;
+  margin-left: 116px;
+}
+
+.imgWidth1 {
+  width: 33px;
+  height: fit-content;
+}
+
+.width1 {
+  width: 5px;
+}
+
+.widthCont {
+  width: 42%;
+}
+
+.fontSize {
+  font-size: 32px;
+}
+
+.textColor {
+  color: #666666;
+  font-size: 14px;
+}
+
+.borderRad {
+  border-radius: 5px;
+}
+
+.heightInp {
+  height: 33px;
+}
+
+.dimensions {
+  font-size: 20px;
+  color: gray;
+}
+
+.borderRadius {
+  border-radius: 25px;
+  height: 50px;
+  align-items: center;
+}

@@ -1,0 +1,74 @@
+.marginTop {
+  margin-top: 60px;
+}
+
+.widthCont {
+  width: 32%;
+}
+
+.imgWidth {
+  width: 7%;
+  height: fit-content;
+}
+
+.imgWidth1 {
+  width: 10%;
+  height: fit-content;
+}
+
+.gapInbtw {
+  width: 5px;
+}
+
+.letterSpa {
+  letter-spacing: 2px;
+}
+
+/* Input and button */
+.iandbH {
+  height: 50px;
+}
+
+#borderC {
+  border-color: rgb(102, 102, 102);
+}
+
+.underLine:hover {
+  text-decoration: underline;
+}
+
+.widthB {
+  height: 40px;
+}
+
+.fontS {
+  font-size: 15px;
+}
+
+#textLeft {
+  text-align: left;
+}
+
+.backgroundC {
+  background-color: #f5f5f5;
+}
+
+/* form  */
+
+.showpwd {
+  position: absolute;
+  margin: 10px 0 0 -45px;
+  color: black;
+  font-weight: lighter;
+  font-size: 13px;
+}
+.showpwd:hover {
+  color: black;
+}
+#hidepwd {
+  display: none;
+}
+#inputpwd {
+  border-radius: 0px;
+  height: 40px;
+}

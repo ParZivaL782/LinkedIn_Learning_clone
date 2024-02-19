@@ -1,0 +1,899 @@
+<!-- 2nd checkout page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/xcode.min.css" /> -->
+
+    <link rel="icon" href="https://static-exp1.licdn.com/sc/h/9zdi3ctlftg3w912onmsvg2bn" sizes="96x96" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="checkout.css">
+    <style>
+      body {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+          Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial,
+          sans-serif;
+        margin: 0;
+      }
+      #checkout_nav {
+        background-color: white;
+        width: 100%;
+        height: 50px;
+      }
+      #checkout_text {
+        font-size: 1.2rem;
+        font-weight: 200;
+        color: rgb(71, 70, 70);
+        display: inline-block;
+        letter-spacing: 2px;
+        vertical-align: middle;
+        fill-opacity: 0.6;
+        padding-bottom: 25px;
+      }
+      #checkout_logo {
+        margin-left: 18%;
+      }
+      #Checkout_setting_logo {
+        float: right;
+        padding-top: 20px;
+        margin-right: 15%;
+      }
+      #Checkout_logo:hover {
+        box-sizing: border-box;
+        fill: #0073b1;
+        cursor: pointer;
+      }
+      .show {
+        display: block;
+        z-index: 1;
+      }
+
+      #settings-dropdown1 {
+        border-color: rgba(0, 0, 0, 0);
+        border-style: solid;
+        content: "";
+        height: 0px;
+        width: 2px;
+        margin-left: 55px;
+        top: 29px;
+        border-left-width: 10px;
+        border-right-width: 5px;
+        color: #7d8083;
+      }
+      #settings-dropdown1 {
+        left: 74%;
+        position: absolute;
+      }
+      #settings-dropdown1 {
+        background: white;
+        width: 89px;
+        height: -1px;
+        text-align: center;
+      }
+      #checkout_1stblock {
+        width: 700px;
+        height: 90px;
+        margin-top: 10px;
+        margin-left: 30%;
+        border-radius: 10px;
+        background-color: white;
+      }
+      #checkout_1stblock_banner1 {
+        font-size: 1.3rem;
+        line-height: 1.4;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        background-color: #398b18;
+        width: 250px;
+        height: 70px;
+        border-radius: 10px 0px 0px 10px;
+        padding-top: 20px;
+        float: left;
+      }
+      #checkout_1stblock_banner2 {
+        float: left;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        font-weight: 400;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.9);
+        padding-top: 20px;
+        padding-left: 20px;
+      }
+
+      .box {
+        width: 180px;
+        height: auto;
+        background-color: white;
+        padding: 20px;
+        position: relative;
+        margin: 40px;
+      }
+      .box.arrow-top {
+        margin-top: 40px;
+      }
+
+      .box.arrow-top:after {
+        content: " ";
+        position: absolute;
+        right: 20px;
+        top: -15px;
+        border-top: none;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid white;
+      }
+      #checkout_circle {
+        background-color: #398b18;
+        color: white;
+        width: 30px;
+        height: 25px;
+        border-radius: 100px;
+        text-align: center;
+        padding-top: 5px;
+        margin-top: 1%;
+        margin-left: 30%;
+        float: left;
+      }
+      #checkout_circle1_text1 {
+        float: left;
+        margin-left: 1%;
+        margin-top: 1%;
+        font-size: 1.3em;
+
+        font-weight: normal;
+      }
+      #checkout_circle1_text2 {
+        clear: both;
+        margin-left: 33%;
+      }
+      #checkout_2ndblock1 {
+        width: 340px;
+        height: 90px;
+        margin-top: 10px;
+        margin-left: 30%;
+        border-radius: 10px;
+        background-color: white;
+        float: left;
+      }
+      #checkout_2ndblock2 {
+        width: 340px;
+        height: 90px;
+        margin-top: 10px;
+        margin-left: 1%;
+        border-radius: 10px;
+        background-color: white;
+        float: left;
+      }
+      .option-header {
+        font-size: 1.2rem;
+        line-height: 1.33333;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+      }
+      .option-subheader,
+      .option-total {
+        font-size: 0.9rem;
+        line-height: 1.42857;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.75);
+        text-align: center;
+        padding-right: 35px;
+      }
+      #save39 {
+        font-size: 1rem;
+        line-height: 1.42857;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.9);
+        color: #398b18;
+        font-style: normal;
+        position: absolute;
+        right: 8px;
+        top: 50px;
+        background-color: #398b18;
+        color: #fff;
+        padding: 0 8px;
+        border-radius: 2px;
+        right: 0;
+        top: 0;
+        vertical-align: baseline;
+        margin: 230px;
+        margin-right: 26%;
+        margin-top: 14.35%;
+      }
+      #checkout_2ndblock4 {
+        margin-top: 7%;
+      }
+      #checkout_2ndblock43 {
+        width: 700px;
+        height: 560px;
+        margin-left: 30%;
+        border-radius: 10px;
+        background-color: white;
+      }
+      #checkout_2ndblock41 {
+        float: left;
+        margin-left: 1%;
+        margin-top: 1%;
+        font-size: 1.3em;
+      }
+      #checkout_2ndblock42 {
+        float: left;
+        margin-left: 1%;
+        margin-top: 1.2%;
+        margin-left: 20%;
+        color: #0a66c2 !important;
+      }
+      @media only screen and (min-width: 1004px) {
+        #checkout_2ndblock42{
+          margin-left: 30%;
+        }
+        #save39{
+        margin-right: 1.5%;
+        margin-top: 22.2%;
+      }
+       
+      }
+      @media only screen and (min-width: 1280px) {
+      #checkout_2ndblock42{
+        margin-left: 20%;
+      }
+      #save39{
+        margin-right: 26%;
+        margin-top: 14.4%;
+      }
+      #checkout_2ndbox{
+        padding-bottom: 10px !important
+      }
+    }
+      #checkout_2ndblock43 img {
+        width: 25px;
+        height: 25px;
+        margin-left: 2%;
+        margin-top: 2%;
+      }
+      #checkout_form {
+        margin-left: 20%;
+      }
+      #settings_signout {
+        text-align: center;
+        margin-top: -10px;
+      }
+      #settings_signout:hover {
+        cursor: pointer;
+        color: #0f0f0f;
+      }
+      #checkout_form input,
+      select {
+        height: 25px;
+        width: 70%;
+        margin-bottom: 3%;
+      }
+      #checkout_exp,
+      #checkout_sec,
+      #checkout_pos,
+      #checkout_gst {
+        float: left;
+        width: 41%;
+      }
+      #contact_form_countrylabel {
+        float: none;
+        padding: 10px 50px 20px 0px;
+        text-align: left;
+      }
+      #checkout_form_submit {
+        margin-top: 5%;
+        color: white;
+        background-color: rgb(0, 110, 255);
+        width: 130px;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        margin-left: 40%;
+      }
+      #checkout_2ndbox{
+        padding-bottom: 50px;
+      }
+      #overLay {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+
+        background-size: cover;
+        background-image: linear-gradient(to right, #0a66c2c7, #02328094),
+        url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1131714824%2F960x0.jpg%3Ffit%3Dscale");
+        width: 100vw;
+        height: 100%;
+        z-index: 10;
+        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+        display: none;
+      }
+      #overLayGif {
+        margin: 40px 20vw;
+      }
+  .footBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12.5px;
+    color: #666;
+    
+    margin-top: 20px !important;
+    max-width: 1150px;
+    margin: auto;
+  }
+  .footBar img {
+    filter: grayscale(100%);
+  }
+
+  </style>
+    <Style>
+/* -------------------------------------------- */
+
+
+
+
+      /* 2nd checkout */
+
+
+.HandW {
+    width: 80%;
+    height: 40px;
+  }
+  
+  .dummy {
+    height: 15px;
+  }
+  
+  .letterSpa {
+    letter-spacing: 2px;
+  }
+  
+  .bgColor {
+    background-color: #f3f2ef;
+  }
+  
+  .width1 {
+    width: 57%;
+  }
+  
+  .bgColor1 {
+    background-color: #398b18;
+    width: 34%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .bgColor2 {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .dimension1 {
+    height: 90px;
+    width: 35%;
+    font-size: 20px;
+    padding-top: 11px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #398b18;
+  }
+  
+  .dimension2 {
+    height: 90px;
+    width: 65%;
+    font-size: 20px;
+    padding-top: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .radius1 {
+    border-radius: 10px;
+  }
+  
+  .roundText {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: #398b18;
+    margin: 5px;
+  }
+  
+  .bgGreen {
+    background-color: #398b18;
+  }
+  
+  .fontS {
+    font-size: 13px;
+  }
+  
+  .rTL {
+    border-top-left-radius: 10px;
+  }
+  
+  .rTR {
+    border-top-right-radius: 10px;
+  }
+  
+  .rBL {
+    border-bottom-left-radius: 10px;
+  }
+  
+  .rBR {
+    border-bottom-right-radius: 10px;
+  }
+  
+  .borderRadius {
+    border-radius: 25px;
+    height: 50px;
+    align-items: center;
+  }
+  
+  .fontSize {
+    font-size: 12px;
+  }
+  
+  .h50 {
+    height: 50px;
+  }
+  
+  .w33 {
+    width: 33%;
+  }
+  .cartee{
+      height: 9cm;
+      width: 700px;
+      /* border: 1px solid green; */
+      margin-top: 20px;
+      margin-left: -45px;
+      border: 1px solid grey;
+      border-radius: 5px;
+  }
+  .headd{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+   
+    background-color: #f4f4f4;
+    border: 1px;
+
+  }
+  .head-img{
+      width: 200px;
+      height: 90%;
+      /* border: 1px solid black; */
+      margin: 8px 0 3px 10px;
+      /* display: flex; */
+      
+  }
+
+  .head-img img{
+      width: 170px;
+      height: 80px;
+  }
+  .head-txt{
+      width: 700px;
+      /* border: 3px solid red; */
+      margin-left: 4px ;
+      margin-top: 5px;
+     
+  }
+   .head-txt p{
+      font-size: small;
+      color: grey;
+      text-shadow: 2cm;
+  }
+  .bodyy{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 55%;
+    background-color: #f4f4f4;
+
+
+  }
+  .foott{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 15%;
+    border: 1px solid grey;
+
+  }
+  .flexxx{
+      display: flex;
+      margin-left: 30px;
+  }
+  .flexxx div h6{
+    margin-left: 30px; 
+  }
+  .bodyFLEX{
+      width: 370px;
+      border: 2 px yellow;
+      margin-left: 9px;
+      
+  }
+  .flexxx02{
+    margin-left: 12cm;
+    margin-top: -4.2cm;
+}
+.foott{
+    background-color: #f4f4f4;
+}
+.foott p{
+    font-size: x-small;
+    margin: 12px;
+    color: grey;
+    margin-top: 4px;
+}
+hr{
+    margin: 0;
+}
+.mb-0 {
+    margin: 3.5px;
+}
+.RYO{
+    background-color: white;
+    border-radius: 10PX;
+    margin: 0px;
+}
+span{
+    color: 
+    #3c94c3;
+    
+}
+.BodyRYO{
+    margin: 15px;
+    background: #f3f6f8;
+}
+.down{
+    margin-left: 250px;
+}
+.lock{
+    margin-left: 220px;
+    margin-top: -42px;
+}
+button{
+    background:#3c94c3 ;
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+}
+    </Style>
+
+</head>
+<body class="bgColor">
+    <nav class="navbar navbar-light bg-white">
+        <div class="d-flex justify-content-between HandW m-auto align-baseline text-center pt-2">
+            <div class="d-flex justify-content-around text-center align-middle">
+                <div><img src="https://static-exp1.licdn.com/sc/h/9zdi3ctlftg3w912onmsvg2bn"></div>
+                <div class="ps-2"><i class="bi bi-lock"></i></div>
+                <div class="letterSpa ps-2">SECURE CHECKOUT</div>
+            
+            </div>
+            <div><i class="bi bi-gear "></i></div>
+        </div>
+        
+    </nav>
+    <div class="bgColor">
+        <div class="width1 m-auto container-fluid">
+            <div class="mt-3 w-100 bg-white d-flex radius1 mb-3">
+                <div class="dimension1 text-white text-center">
+                    <div>Checkout</div>
+                    <div>of item</div>
+             
+              
+                </div>
+                <div class="dimension2 d-flex ps-3"><div>Teja</div><div>, you're a step closer to advancing your      career!</div></div>
+            </div>
+            <!-- ---------------------------------------------- -->
+            <div class="mb-0 d-flex">
+                <div class="roundText text-white text-center">1</div>
+                <div class="ps-3">
+                    <p class="fw-bold fs-5 mb-0">Items in your Cart cycle</p>
+                    <div class="cartee">
+<div class="headd">
+    <div class="head-img">
+        <img src="https://cdn.lynda.com/course/2449235/2449235-1645030635794-16x9.jpg" alt="">
+        <!-- <p>Communicating through Disagreement ₹1,150.00</p> -->
+    </div>
+     <div class="head-txt">
+         <!-- <h6>Communicating through Disagreement ₹1,150.00</h6> -->
+         <h6>Communicating through Disagreement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹1,150.00</p>
+            <p>By: Lynne Hurdle, Madecraft</p>
+            <p>COURSE : 16 videos</p>
+        </div>
+</div>
+<hr>
+<div class="bodyy">
+    <h6>&nbsp; Included with your purchase:</h6>
+    <div class="bodyFLEX">
+    <div class="flexxx">
+        <li-icon class="lil-content__cart-info--icon" type="playlist-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><g class="large-icon" style="fill: currentColor">
+            <rect x="11" y="6" width="11" height="2"></rect>
+            <rect x="15" y="11" width="7" height="2"></rect>
+            <rect x="11" y="16" width="11" height="2"></rect>
+            <path d="M13,12a1.27,1.27,0,0,0-.65-1.11L2,4.88V19.13l10.36-6A1.32,1.32,0,0,0,13,12ZM4,16V8l6.75,4Z"></path>
+          </g></svg></li-icon> <p>16 videos</p></div>
+         <h6>
+            Certificate of completion to add to your LinkedIn profile</h6>
+          <div class="flexxx">
+            <svg viewBox="0 0 24 24" width="24" height="24"  x="0" y="0" preserveAspectRatio="xMinYMin meet" focusable="false"><path d="M21,4H3A1,1,0,0,0,2,5V19a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V5A1,1,0,0,0,21,4ZM20,18H4V6H20V18Zm-2-8H6V9H18v1Zm-2,2H8V11h8v1Zm-6,4H6V15h4v1Zm7.5-2A1.5,1.5,0,1,1,16,15.5,1.5,1.5,0,0,1,17.5,14Z" class="large-icon" style="fill: currentColor"></path></svg>
+            
+          </div>
+          <h6> Learn anytime, anywhere through mobile apps and offline access</h6>
+          
+</div>
+
+<div class="flexxx02">
+    <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M19,10H10V5.88a2,2,0,0,1,4,0V8h2V6.17A4.12,4.12,0,0,0,12.39,2,4,4,0,0,0,8,6v4H5a1,1,0,0,0-1,1V21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V11A1,1,0,0,0,19,10ZM18,20H6V12H18v8Zm-7-2.87V14.88a1,1,0,0,1,2,0v2.25A1,1,0,0,1,11,17.13Z" class="large-icon" style="fill: currentColor"></path></svg> 
+    <h6>Lifetime access*</h6>
+    
+              </div>
+</div>
+<div class="foott">
+    <p>*Courses will generally remain available for as long as you keep your LinkedIn account, unless otherwise specified during checkout. On rare occasions we may need to remove certain courses for legal or other reasons.</p>
+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-0 d-flex">
+
+          <!--needy -->      <div class="roundText text-white text-center">2</div>
+                <div class="ps-3">
+                    <p class="fw-bold fs-5 mb-0">Payment</p>
+                    <!-- <p class="fs-6">Select annual to save <b>37%</b> and expense with a <b>single receipt</b>.</p> -->
+                </div>
+            </div>
+            <!-- <div class="d-flex mb-4">
+                <div class="w-50 bg-white me-2 ra radius1 text-center pt-4 pb-4">
+                    <div class="fw-bold">Monthly</div>
+                    <div class="fontS">1-month free trial</div>
+                    <div class="fontS">then $1,610.17 / month</div>
+                </div> -->
+                <!-- <div class="w-50 bg-white radius1 text-center pb-2 pb-2">
+                    <div class="d-flex">
+                        <div class="flex-grow-1"></div>
+                        <div class="text-end bgGreen text-white flex-row-reverse ps-1 pe-1 fw-bold mb-0">Save 37%</div>
+                    </div>
+                    <div class="fw-bold">Annual</div>
+                    <div class="fontS">1-month free trial</div>
+                    <div class="fontS">then $1,610.17 / month ($12,203.39 annually)</div>
+                </div> -->
+            <!-- </div>  -->
+            <div class="bg-white radius1 mb-4">
+                <div class="bg-white p-3 rTR rTL mb-0">
+                    <div class="justify-content-between d-flex">
+                        <div>Estimated tax (18%)</div>
+                        <div>₹ 207.1</div>
+                    </div>
+                    <hr>
+                    <div class="justify-content-between d-flex fw-bold">
+                        <div>Today's total</div>
+                        <div> ₹1,150.00</div>
+                    </div>
+                    </div>
+                <div class="bg-white mt-0 rBR rBL">
+                    <hr>
+                    <div class="fontS p-3">
+                        Your free trial begins on <span class="fw-bold">February 23, 2022</span> and will end on <b>March 23, 2022</b>. You can cancel anytime before <b>March <br>23, 2022</b>
+                        to avoid being charged and we'll send an email reminder <b>7 days before</b> the trial ends.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 d-flex">
+                <!-- <div class="roundText text-white text-center">2</div>
+                <div><p class="fw-bold fs-5 mb-0 ps-3 ">Payment</p></div> -->
+                <div class="flex-grow-1 text-end">
+                    <span class="tt " data-bs-placement="bottom"
+                        title="Don't worry you won't be charged until your free trial ends. We ask for your payment information to provide a seamless subscription experiece. You can cancel anytime before march 23 2022 to avoid being charged, and we'll send you an email reminder 7 days before your free trial ends.">
+                        <p class="fontS pt-1 text-primary d-inline">Why do we need this for a free trial?</p>
+                    </span>
+                </div>
+            </div>
+            <div class="bg-white radius1">
+                <div class="ps-4">
+                    <img class="w-50 pt-3" src="https://static-exp1.licdn.com/sc/h/8bca1rltjmsti0v31srweuz2z">
+                </div>
+                <hr>
+                <!-- <div class="w-50 m-auto mb-4">
+                    <div>First name</div>
+                    <div class="mb-2"><input class="w-100" type="text"></div>
+                    <div>Last name</div>
+                    <div class="mb-2"><input class="w-100" type="text"></div>
+                    <div>Credit or debit card number</div>
+                    <div class="mb-2"><input class="w-100" type="text"></div>
+                    <div class="d-flex mb-2">
+                        <div>
+                            <div>Expiration date</div>
+                            <div><input class="w-100" type="date"></div>
+                        </div>
+                        <div class="ps-3">
+                            <div>Security code</div>
+                            <div><input class="w-100" type="number"></div>
+                        </div>
+                    </div>
+                    <div>Country</div>
+                    <div class="mb-2"><select class="selectpicker countrypicker w-100"></select></div>
+                    <div class="d-flex mb-4">
+                        <div>
+                            <div>Postal code</div>
+                            <div><input class="w-100" type="text"></div>
+                        </div>
+                        <div class="ps-3">
+                            <div>GST</div>
+                            <div><input class="w-100" type="text" placeholder="Optinal"></div>
+                        </div>
+                    </div>
+                    <button>Review Order</button>
+                </div> -->
+                <!-- =============================================================================
+                ============================================================================
+                ================================================================================ -->
+                <!-- action="http://localhost:5700/checkout" method="POST" -->
+                <form id="checkout_form" > 
+                
+                  <!-- //method = post && action = /checkout  -->
+                    <label>First name<span style="color:#0a66c2">*</span></label><br>
+                    <input id="fname" type="text" name="first_name" ><br>
+                    <label>Last name<span style="color:#0a66c2">*</span></label><br>
+                    <input id="lname"  type="text"  name="last_name"><br>
+                    <label>Credit or debit card number<span style="color:#0a66c2">*</span></label><br>
+                    <input id="cardnum" type="text"  name="card_number"><br>
+                    <div id="checkout_exp">
+                    <label >Expiration date<span style="color:#0a66c2">*</span></label><br>
+                    <input id="expd" type="text" placeholder="MM/YY" name="exp"></div>
+                    
+                    <div id="checkout_sec" class="col-auto">
+                    <label>Security code<span style="color:#0a66c2">*</span></label><br>
+                    <input id="sec_cod" type="text" name="sec_code" ></div>
+                   <br>
+                    <label id="contact_form_countrylabel">Country<span style="color:#0a66c2">*</span></label><br>
+                    <select id="countryn" name="country">
+                    <option>India</option>
+                    </select>
+                    <br>
+                    <div id="checkout_pos">
+                    <label>Postal code<span style="color:#0a66c2">*</span></label><br>
+                    <input id="postal" type="text" name="postal"><br></div>
+                    <div id="checkout_gst">
+                    <label>GST</label><br>
+                    <input id="gsta" type="text" placeholder="Optional" name="gst"><br></div>
+                    <br>
+                   <input type="submit" textContents="placeorder">
+                </form>
+            </div>
+            <div class="mb-0 d-flex">
+
+                <!--needy -->      <div class="roundText text-white text-center">3</div>
+                      <div class="ps-3">
+                          <p class="fw-bold fs-5 mb-0">Review Order</p>
+                          <!-- <p class="fs-6">Select annual to save <b>37%</b> and expense with a <b>single receipt</b>.</p> -->
+                      </div>
+                  </div>
+                  <div class="RYO">
+                      <div class="HeadRYO">
+                          <ul>
+                              <li>You will only be charged once for the purchase of this course.</li>
+                              <li>You will have access to this course through your LinkedIn Learning account.</li>
+                              <li>Any future updates to this course will be automatically distributed to you at no additional cost.
+                            </li>
+                          </ul>
+                      </div>
+                      <div class="BodyRYO">By placing this order you agree to our <span>terms of service</span> . To ensure continued service, we'll store and update (e.g., upon expiration) your payment method. Learn about our <span>refund policy</span>
+                          </div>
+                      <div class="down">
+                          <button>Place order</button>
+                          <!-- <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z" class="small-icon" style="fill-opacity: 1"></path> -->
+                          <p>Secure checkout</p>
+                      </div>
+                      <div class="lock">
+    <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M19,10H10V5.88a2,2,0,0,1,4,0V8h2V6.17A4.12,4.12,0,0,0,12.39,2,4,4,0,0,0,8,6v4H5a1,1,0,0,0-1,1V21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V11A1,1,0,0,0,19,10ZM18,20H6V12H18v8Zm-7-2.87V14.88a1,1,0,0,1,2,0v2.25A1,1,0,0,1,11,17.13Z" class="large-icon" style="fill: currentColor"></path></svg> 
+</div>
+                  </div>
+            <div class="bg-white radius1 mb-4">
+                <div class="">
+                    Frequently asked questions
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <div class="p-4 w33">
+                        <div class="fontS fw-bold h50">Will I be charged during my free trial?</div>
+                        <div class="fontSize">No, you won't be charged during your free trial, which begins on February 23, 2022 and ends on March 23, 2022. You can
+                        cancel anytime before March 23, 2022 to avoid being charged.</div>
+                    </div>
+                    <div class="p-4 w33">
+                        <div class="fw-bold fontS h50">How can I cancel during my free trial?</div>
+                        <div class="fontSize">Once you're signed up, a link to cancel will appear on your Settings page. Learn more about how to cancel on our <a href="#">Help
+                        Center</a>.</div>
+                    </div>
+                    <div class="p-4 w33">
+                        <div class="fw-bold fontS h50">What happens after the free trial period?</div>
+                        <div class="fontSize">If you do not cancel before your free trial period ends on March 23, 2022, you will be automatically charged for your
+                        subscription.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------- -->
+    
+    <!-- tooltip -->
+    
+
+<!--    
+   
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"></script> -->
+</body>
+</html>
+
+
+<script>
+    // const tooltip = document.querySelectorAll('.tt');
+    
+    // tooltip.forEach(t => {
+    //     new bootstrap.Tooltip(t)
+        
+    // })
+    document.querySelector("form").addEventListener("submit",(event)=>{
+        event.preventDefault();
+        register() 
+    })
+    async function register() {
+        console.log("narutooo")
+try {
+  let registerData = {
+    first_name: document.querySelector("#fname").value,
+    last_name: document.querySelector("#lname").value,
+    card_number: document.querySelector("#cardnum").value,
+    exp: document.querySelector("#expd").value,
+    sec_code: document.querySelector("#sec_cod").value,
+    country: document.querySelector("#countryn").value,
+    postal: document.querySelector("#postal").value,
+    gst:document.querySelector("#gsta").value,
+  };
+
+  registerData = JSON.stringify(registerData);
+ 
+  let res = await fetch("https://lynda01.herokuapp.com/checkout", {
+    method: "POST",
+    body: registerData,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  let user = await res.json();
+ 
+  console.log("user:", user);
+  if (user.status){
+      alert ("Payment is Successfull")
+      window.location.href="index.html"
+  }
+} catch (error) {
+  console.log("error:", error);
+}
+}
+    
+</script>

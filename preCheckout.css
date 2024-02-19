@@ -1,0 +1,47 @@
+.bgColor {
+  background-color: #fdfaf5;
+}
+
+.HandW {
+  width: 80%;
+  height: 40px;
+}
+
+.letterSpa {
+  letter-spacing: 3px;
+}
+
+.heighT {
+  height: 50px;
+}
+
+.dimensions {
+  border-radius: 20px;
+  height: 40px;
+  width: 150px;
+}
+
+.bRad {
+  border-radius: 10px;
+}
+
+.bTR {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.fontSize {
+  font-size: 13px;
+}
+
+.textDecor {
+  text-decoration: none;
+}
+
+.textDecor:hover {
+  text-decoration: underline;
+}
+
+.boxShadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

@@ -1,0 +1,65 @@
+.bColor {
+  background-color: #f3f2ef;
+}
+
+.marginTop {
+  margin-top: 23px;
+}
+
+.widthCont {
+  width: 42%;
+}
+
+.imgWidth1 {
+  background-color: #f3f2ef;
+  width: 8%;
+  height: fit-content;
+}
+
+.fontSize {
+  font-size: 32px;
+}
+
+.textColor {
+  color: #666666;
+  font-size: 14px;
+}
+
+.borderRadius {
+  border-radius: 25px;
+  height: 50px;
+  align-items: center;
+}
+
+.fontSizep {
+  font-size: 12px;
+}
+
+.heightInp {
+  height: 33px;
+}
+
+.borderRad {
+  border-radius: 5px;
+}
+
+.hLineR {
+  float: right;
+  width: 35%;
+}
+
+.hLineL {
+  float: left;
+  width: 35%;
+}
+
+.roundText {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+
+.widthImg > img {
+  width: 25px;
+}
